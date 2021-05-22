@@ -8,6 +8,9 @@ Couple of things to note about the implementation:
 - assumes api endpoint for login on backend is `/api/auth/login` which u can change on `pages/auth/login.vue`
 
 > Special thanks to [kritish dhaubanjar](https://github.com/kritish-dhaubanjar)
+
+> You can either [clone this repo](#clone-this-repo) or [implement this in your existing nuxt project](#implement-in-existing-nuxt-project)
+
 ### Structure for authentication 
 ```
 ... typical nuxt directory structure with following added files
@@ -52,8 +55,9 @@ read more [here](https://nuxtjs.org/docs/2.x/directory-structure/middleware)
 as it sets the accessToken state of store.
 
 
-### Usage
+## Usage
 
+## Clone This Repo
 You can clone this repo for starter template:
 
 
@@ -69,9 +73,10 @@ You can clone this repo for starter template:
 `npm run dev`
 
 
-Or you can implement this authentication using the steps below:
+## Implement In Existing Nuxt Project
+Or you can implement this authentication in your existing nuxt project using the steps below:
 
-1. add axios if not already added
+1. add axios package if not already added to your project
 
 `npm install @nuxtjs/axios`
 
