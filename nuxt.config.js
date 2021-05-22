@@ -1,4 +1,5 @@
 export default {
+  ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-auth-boilerplate',
@@ -20,8 +21,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ['~/plugins/init.js', '~plugins/axios.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -37,7 +37,12 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL:
+    process.env.NODE_ENV === 'development'
+    ? 'http://localhost:8000/api'
+    : 'http://localhost:8000/api'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
