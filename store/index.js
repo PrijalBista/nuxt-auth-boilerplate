@@ -45,7 +45,7 @@ export const actions = {
 					})
 					.catch(error => {
 						console.log('errorhere', error);
-						// this.commit('resetTokenAndUser');
+						this.commit('resetTokenAndUser'); // logout immediately if any error occurs when getting user detail.
 					});
 			}
 	},
